@@ -1,0 +1,354 @@
+/* This Contains the Image Container and the image */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .carousel__container {
+    border-bottom: 1px solid darkgray;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .carousel__container {
+    border-bottom: 1px solid darkgray;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/* This Contains the Image of the Carousel */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .picsum-img-wrapper {
+    /* background: #FDF0D5; */
+    /* border-bottom: 1px solid darkgray; */
+    padding: 5px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .picsum-img-wrapper {
+    /* background: #FDF0D5; */
+    /* border-bottom: 1px solid darkgray; */
+    padding: 10px;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+/* This is the Carousel Images */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .carousel__images {
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .carousel__images {
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 420px;
+  }
+}
+
+
+/* This is the Tags Container */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .tags {
+    /* border: 1px solid blueviolet; */
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* The Particular Tag Section */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .tags a {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    border: 1px solid #FC814A;
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    padding: 5px;
+    margin: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    /* font-family: "Quicksand"; */
+    color: #880D1E;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .tags a {
+    background-color: whitesmoke;
+    border: 1px solid #FC814A;
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    padding: 0.3rem 1rem;
+    margin: 0.2rem 0.5rem;
+    border-radius: 10rem;
+    font-weight: 600;
+    /* font-family: "Quicksand"; */
+    color: #880D1E;
+  }
+}
+
+.tags a:hover {
+  opacity: 0.9;
+}
+
+/* The Ul Container For FoodsList */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  ul {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+
+/* list of the Food Items  */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  li a {
+    height: 180px;
+    width: 150px;
+    border: 1px solid lightgray;
+    box-shadow: 1px 2px 4px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #bc1a30;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  li a {
+    height: 290px;
+    width: 230px;
+    border: 1px solid lightgray;
+    box-shadow: 1px 2px 4px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #bc1a30;
+  }
+}
+
+
+/* Hover over the List */
+li a:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/* The Image  of  the Food Items */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .food__image {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .food__image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+}
+
+
+/* The Details of the Food i.e Name, fav., ratings, cookTime, Origins, Price */
+.contents {
+  padding: 5px;
+  /* background-color: whitesmoke; */
+}
+
+/* The Name of the Food item */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .name {
+    border: 1px solid whitesmoke;
+    font-weight: bold;
+    font-size: 13px;
+    background: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .name {
+    border: 1px solid whitesmoke;
+    font-weight: bold;
+    background: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* The Favorite Icon */
+.favorite {
+  color: red;
+}
+
+/* if it's not Favorite */
+.favorite.not {
+  color: darkgray;
+}
+
+/* The Ratings and CookTime Container */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .rating__cookTime {
+    margin: -3px auto;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .rating__cookTime {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+/* The Ratings Stars */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .rating {
+    /* margin-bottom: 3px; */
+    font-size: 10px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .rating {
+    margin-bottom: 3px;
+  }
+}
+
+/* TheCookTime Required */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .cookTime {
+    display: none;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .cookTime {
+    font-family: "Quicksand", "sans-serif";
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+/* This Contains the origins and price */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .product-item-footer {
+    margin: -5px auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  word-spacing: 1px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .product-item-footer {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  word-spacing: 1px;
+  }
+}
+
+
+/* The origin Section */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .origins {
+    font-family: "Quicksand", "Sans-serif";
+    font-style: oblique;
+    font-size: 12px;
+    font-weight: bold;
+    background: whitesmoke;
+    color: rgb(11, 16, 3);
+    /* margin-bottom: 5px; */
+    display: flex;
+    justify-content: space-around;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .origins {
+    font-family: "Quicksand", "Sans-serif";
+    font-style: oblique;
+    /* font-size: large; */
+    font-weight: 600;
+    background: whitesmoke;
+    color: rgb(11, 16, 3);
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+/* The price Section */
+.price {
+  font-family: "Quicksand", "sans-serif";
+  font-size: 15px;
+  font-weight: 600;
+}

@@ -1,0 +1,110 @@
+/* the Main Container */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    margin-top: 1rem;
+    display: flex;
+    margin: 1rem 1rem 3rem 1rem;
+    justify-content: center;
+  }
+}
+
+/* This Contains the Form and order-items-List */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .content {
+    width: 100%;
+    padding: 5px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .content {
+    width: 35rem;
+    margin-right: 3rem;
+  }
+}
+
+/* The Content and the Form class */
+.content,form {
+     display: flex;
+     flex-direction: column;
+}
+
+/* The Checkout Form */
+form {
+    width: 100%;
+}
+
+/* This Contains the Map Heading, MAP and Buttons Container */
+/* Extra small devices (phones, 600px and down) */
+/* Large devices (laptops/desktops, 992px and up) */
+
+/*the Main buttons Container --the Go To Payment  */
+.buttons__container {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* the Buttons Container */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .buttons {
+    margin: 10px 0px 10px 0px;
+    width: 15rem;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px)  {
+  .buttons {
+    margin: 1rem;
+    width: 20rem;
+  }
+}
+
+/* the Go To Payment Button */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  button {
+    padding: 5px 5px;
+    color: white;
+    background-color: #e72929;
+    width: 100%;
+    height: 3rem;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2px 2px grey;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  button {
+    color: white;
+    background-color: #e72929;
+    width: 100%;
+    height: 3rem;
+    opacity: 0.8;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2px 2px grey;
+  }
+}
+
+
+button:hover {
+    opacity: 1;
+}

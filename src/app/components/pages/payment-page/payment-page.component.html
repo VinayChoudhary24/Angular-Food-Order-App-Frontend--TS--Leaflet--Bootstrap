@@ -1,0 +1,35 @@
+<!-- Completely Similar to the Checkout Page -->
+<div class="container">
+  <div class="content">
+      <!-- theApp title Component -->
+      <app-cart-page-title title="Order Summary" fontSize="1.6rem"></app-cart-page-title>
+  <!-- Render the Order-Items-List Component -->
+  <order-items-list [order]="order"></order-items-list>
+  </div>
+
+  <div>
+    <!-- app title Component -->
+  <app-cart-page-title
+  title="Shipping Address"
+  fontSize="1.3rem"></app-cart-page-title>
+
+    <!-- the MAP Section -->
+    <div class="right__section">
+      <!-- Render the MAP Component -->
+      <!-- Define [order] to get the Location by Clicking the Button Find My Location -->
+      <!-- [readonly] will Show Just Marker Selected from Checkoout Page -->
+      <map class="map" [order]="order" [readonly]="true"></map>
+
+      <!-- The Buttons Container --Payment Button -->
+      <div class="buttons__container">
+          <div class="buttons">
+            <!-- the RazorPay Button -->
+              <a routerLink="/razorpay"><button id="pay-button" style="background-color: #1e40a0; margin-bottom: 1rem;">UPI Payments</button></a>
+              <!-- Render the Paypal Button -->
+              <!-- Pass the Stored Order -->
+              <paypal-button [order]="order"></paypal-button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

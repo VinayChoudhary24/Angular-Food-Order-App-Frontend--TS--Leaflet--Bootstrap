@@ -1,0 +1,9 @@
+ <!-- To Show the Error Message -->
+ <div
+ *ngIf="errorMessages && showErrorsWhen"
+ class="error__list">
+ <!-- When the email Field is Empty -->
+ <div *ngFor="let errorMessage of errorMessages">
+    {{ errorMessage  }}
+ </div>
+</div>

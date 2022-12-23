@@ -1,0 +1,76 @@
+/* Pure CSS Loader */
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    /* border-bottom: 10px solid #e72929; */
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #e72929;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+
+  /* The Main Container */
+  .container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffea;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+  }
+
+  /* The Contains the Loader Div's */
+  .details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+  }
+
+  /* The Text Please Wait */
+  h3 {
+    color: brown;
+    text-transform: lowercase;
+  }
+

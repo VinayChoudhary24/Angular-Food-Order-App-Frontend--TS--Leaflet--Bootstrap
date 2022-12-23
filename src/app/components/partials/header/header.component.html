@@ -1,0 +1,87 @@
+<!-- The Main Header Section -->
+<header>
+  <!-- This Contains the logo Sections -->
+  <div class="container__options">
+    <div class="app__name">
+    <!-- The Name and Logo of the Application -->
+    <a
+    routerLink="/"
+    class="name">Madani</a>
+    </div>
+    <!-- The Search Bar -->
+    <!-- <div class="search">
+      <app-search></app-search>
+    </div> -->
+    <div class="search">
+      <input
+      #s
+      (keyup.enter)="search(s.value)"
+      [value]="searchTerm"
+      class="search__input"
+      placeholder="SEARCH CUISINE"
+      type="text">
+      <span><fa-icon
+        (click)="search(s.value)"
+        class="search__icon"
+        [icon]="searchIcon"></fa-icon></span>
+    </div>
+
+     <!-- This Contains the Logo for the different Food Order Services Companies-->
+      <!-- This Contains all the logo of other Services  -->
+      <div class="services__logo">
+        <a href="https://www.zomato.com/" target="_blank">
+        <img class="zamato"
+        src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Zomato_Logo.svg"
+        alt="zamato__image" height="50px" width="100px">
+        </a>
+
+        <a href="https://www.swiggy.com/" target="_blank">
+        <img class="swiggy"
+        src="https://upload.wikimedia.org/wikipedia/en/1/12/Swiggy_logo.svg"
+        alt="swiggy__image" height="50px" width="100px">
+        </a>
+
+        <a href="https://www.ubereats.com/" target="_blank">
+        <img class="uber"
+        src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Uber_Eats_2020_logo.svg"
+        alt="uber__image" height="50px" width="100px">
+        </a>
+
+      </div>
+
+      <!-- This Contains User Details -->
+      <nav>
+      <div class="user__details">
+        <ul>
+          <!-- This *ngIf will Hide if the  User is Already logged in -->
+          <li *ngIf="!isAuth">
+            <a
+            routerLink="/login"
+            class="user__login">Login</a>
+          </li>
+          <li *ngIf="isAuth" class="user__menu">
+            <div class="dropdown">
+              <!-- Get the Name of user from userName Property -->
+              <!-- Use the Pipe to Only Show First 8 Characters of Name -->
+              <a routerLink="/dashboard">{{user.name | shortenPipe}}</a>
+
+            <!-- The Othe Features -->
+            <div class="dropdown__menu">
+              <a class="dropdown-item" routerLink="/profile">Profile</a>
+              <a class="dropdown-item" routerLink="/orders">Orders</a>
+              <a (click)="onLogout()" class="dropdown-item" routerLink="">Logout</a>
+            </div>
+            </div>
+          </li>
+
+          <!-- This is the Cart of User -->
+          <li>
+            <a
+            routerLink="/cart-page"><fa-icon [icon]="basketIcon"></fa-icon>
+            <span *ngIf="cartQuantity">{{ cartQuantity }}</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

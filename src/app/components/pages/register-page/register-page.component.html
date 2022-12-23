@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="details">
+        <!-- The Title of the Page -->
+        <app-cart-page-title title="Create Your Account"></app-cart-page-title>
+        <hr>
+
+        <!-- the Register Form -->
+        <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+
+        <!-- We can use the text-Input Component -->
+        <!-- For Name -->
+        <text-input
+        [control]="fc.name"
+        [showErrorsWhen]="isSubmitted"
+        label="Name"></text-input>
+
+        <!-- For Email -->
+        <text-input
+        [control]="fc.email"
+        [showErrorsWhen]="isSubmitted"
+        label="Enter Email"
+        type="email"></text-input>
+
+        <!-- For Password -->
+        <text-input
+        [control]="fc.password"
+        [showErrorsWhen]="isSubmitted"
+        label="Password"
+        type="password"></text-input>
+
+        <!-- For Confirm Password -->
+        <text-input
+        [control]="fc.confirmPassword"
+        [showErrorsWhen]="isSubmitted"
+        label="Confirm Password"
+        type="password"></text-input>
+
+        <!-- For Address -->
+        <text-input
+        [control]="fc.address"
+        [showErrorsWhen]="isSubmitted"
+        label="Enter Delivery Address"></text-input>
+
+        <!-- add default-button Component --for Register Button -->
+        <default-button text="Register"></default-button>
+
+        <!-- If User has Alreday Created a Account -->
+        <!-- Link to Re-direct User to Login Page -->
+        <div class="login">
+            <!-- &nbsp; is Used for White Space -->
+            Already a user? &nbsp;
+            <a
+            routerLink="/login"
+            [queryParams]="{returnUrl: returnUrl}">Login Here</a>
+        </div>
+    </form>
+    </div>
+</div>

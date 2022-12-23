@@ -1,0 +1,47 @@
+<!-- To Show the Login Message -->
+<div *ngIf="loginMessage" class="login__message">
+    <p>{{ loginMessage }}</p>
+</div>
+<!-- The Main Form Container -->
+<div class="container">
+    <div class="details">
+        <!-- the Heading of the Page -->
+        <app-cart-page-title title="Login"></app-cart-page-title>
+
+        <!-- the Form -->
+        <form
+        [formGroup]="loginForm"
+        (ngSubmit)="onSubmit()">
+
+      <!-- The Email Section i.e text-input Component -->
+      <text-input
+      [control]="formControl.email"
+      [showErrorsWhen]="isSubmitted"
+      type="email"
+      label="Enter Email"></text-input>
+
+      <!-- The Password Section i.e text-input Component -->
+      <text-input
+      [control]="formControl.password"
+      [showErrorsWhen]="isSubmitted"
+      type="password"
+      label="Enter Password"></text-input>
+
+        <!-- The Button Container i.e default-button Component -->
+        <default-button
+        bgColor="#3A833A"
+        text="Login"></default-button>
+
+        <!-- if the User is New and Wants to Create a Account -->
+        <!-- Link to Direct User to Register Page -->
+        <div class="register">
+            <!-- &nbsp; is Used for White Space -->
+            New User? &nbsp;
+            <a
+            routerLink="/register"
+            [queryParams]="{returnUrl: returnUrl}">Register Here</a>
+        </div>
+
+    </form>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<!-- the Main Container -->
+<div class="container">
+  <!-- This contains the Contents of the order -->
+  <div class="content" *ngIf="order">
+    <!-- the Order Id -->
+    <h1>Order #{{order.id}}</h1>
+    <!-- the Details About the order -->
+    <div class="details">
+      <!-- The Order Date -->
+      <div><strong>Date</strong> {{order.createdAt | date:'medium'}}</div>
+      <!-- The Name of the User  -->
+      <div><strong>Name</strong> {{order.name}}</div>
+      <!-- The Address of the User -->
+      <div><strong>Address</strong> {{order.address}}</div>
+      <!-- The Status of the Order -->
+      <div><strong>Status</strong> {{order.status}}</div>
+      <!-- The Payment Id for the order -->
+      <!-- Check if Payment Id is Available Or Not -->
+      <div *ngIf="order.paymentId">
+        <strong>Payment ID:</strong> {{order.paymentId}
+      </div>
+    </div>
+    <!-- This Will Show the Order Items Details -->
+    <order-items-list [order]="order"></order-items-list>
+  </div>
+
+  <!-- This Will Show the Shipping Address on the Map -->
+  <app-cart-page-title title="Shipping Address"></app-cart-page-title>
+  <map [order]="order" [readonly]="true"></map>
+</div>

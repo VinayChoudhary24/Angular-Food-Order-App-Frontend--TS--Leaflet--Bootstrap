@@ -1,0 +1,130 @@
+/* the Main Container */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    margin-top: 1rem;
+    display: flex;
+    margin: 0 1rem 1rem 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* This Contains the Form and order-items-List */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid lavender;
+    border-radius: 10px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 2px;
+    width: 35rem;
+    margin-right: 4rem;
+    border: 1px solid lavender;
+    border-radius: 10px;
+  }
+}
+
+/* The Summary Section */
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.summary > div {
+  display: flex;
+  margin-top: 0.4rem;
+}
+
+.summary span {
+  font-size: 1.2rem;
+}
+
+.summary h5 {
+  margin: 0 0.5rem 0 0;
+  flex-basis: 5rem;
+}
+
+/*the Main buttons Container --the Go To Payment  */
+.buttons__container {
+  /* border: 1px solid; */
+  /* width: 100px; */
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* the Buttons Container */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .buttons {
+    margin: 10px 0px 0px 0px;
+    width: 15rem;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .buttons {
+    margin: 0.4rem;
+    width: 20rem;
+  }
+}
+
+/* the Go To Payment Button */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  button {
+    padding: 5px 5px;
+    color: white;
+    background-color: #e72929;
+    width: 100%;
+    height: 3rem;
+    opacity: 0.9;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    /* box-shadow: 2px 2px 2px 2px grey; */
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  button {
+    color: white;
+    background-color: #e72929;
+    width: 100%;
+    height: 3rem;
+    opacity: 0.9;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    /* box-shadow: 2px 2px 2px 2px grey; */
+  }
+}
+
+button:hover {
+  opacity: 1;
+}

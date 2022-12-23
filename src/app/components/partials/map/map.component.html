@@ -1,0 +1,9 @@
+<div class="container">
+    <!-- Button to get the Current Location -->
+    <button *ngIf="!readonly"
+    class="find__location"
+    (click)="findMyLocation()">Find My Location</button>
+
+    <!-- #map will be the Reference for the MAP -->
+    <div #map class="map"></div>
+</div>

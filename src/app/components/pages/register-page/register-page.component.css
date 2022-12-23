@@ -1,0 +1,27 @@
+/* The Main Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 1rem;
+}
+
+/* the Form Container */
+.details {
+    width: 25rem;
+}
+
+/* The Link to Login Page  */
+.login {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login a {
+    cursor: pointer;
+    color: #208420;
+    font-size: large;
+}

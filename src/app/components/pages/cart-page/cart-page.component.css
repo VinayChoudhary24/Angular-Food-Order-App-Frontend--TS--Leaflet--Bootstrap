@@ -1,0 +1,340 @@
+/* The MainContainer */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .cart {
+    /* border: 1px solid; */
+    display: grid;
+    margin: 0 0 0 0;
+    padding: 0;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .cart {
+    /* border: 1px solid; */
+    margin: 0 0 0 0;
+  }
+}
+
+/* this Contains All Details for Food order */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* margin-top: 0.2rem; */
+  }
+}
+
+
+/* The Ul Tag that Contains the Items */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  ul {
+    display: grid;
+    border: 1px solid #ffbbbb;
+    border-radius: 1rem;
+    list-style: none;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  ul {
+    display: flex;
+    flex-direction: column;
+    flex: 2.7 0;
+    justify-content: space-evenly;
+    border: 1px solid #ffbbbb;
+    border-radius: 1rem;
+    list-style: none;
+    /* margin: 5px; */
+    padding: 0;
+  }
+}
+
+/* the List of Items */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  ul li {
+    /* border: 1px solid green; */
+    position: relative;
+    display: grid;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 10px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  ul li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e4e4e4;
+  }
+}
+
+ul li:last-child {
+  border: none;
+}
+
+/* the Image of item */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  li img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100rem;
+    object-fit: cover;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  li img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 100rem;
+    object-fit: cover;
+  }
+}
+
+/* The Name of the Item */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .item__name a {
+    position: absolute;
+    top: 5%;
+    left: 31%;
+    display: flex;
+    justify-content: center;
+    color: brown;
+    font-size: medium;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .item__name a {
+    color: brown;
+    font-size: medium;
+  }
+}
+
+/* All the Div inside the Li */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  li div {
+    /* padding: 1rem; */
+    padding: 4px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px)  {
+  li div {
+    /* padding: 1rem; */
+    padding: 4px;
+  }
+}
+
+/* All the Div but Not First Child */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  li div:not(:first-child) {
+    flex-basis: 18%;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  li div:not(:first-child) {
+    flex-basis: 18%;
+  }
+}
+
+li div:not(:first-child) {
+  flex-basis: 18%;
+}
+
+/* The Quantity Section */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  li select {
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    background-color: whitesmoke;
+    width: 2.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid darkgrey;
+    border-bottom: 1px solid lightgrey;
+    font-size: 1rem;
+    font-weight: 350;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  li select {
+    background-color: whitesmoke;
+    width: 3rem;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid darkgrey;
+    border-bottom: 1px solid lightgrey;
+    font-size: 1.2rem;
+    font-weight: 350;
+  }
+}
+
+
+/* the price of the item */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .item__price {
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    color: brown;
+    font-size: medium;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .item__price {
+    color: brown;
+    font-size: medium;
+  }
+}
+
+/* the Button to Remove the item */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  li .remove__button {
+    position: absolute;
+    top: 35%;
+    left: 70%;
+    border-radius: 1rem;
+    border: 1px solid darkgrey;
+    padding: 5px;
+    color: #e72929;
+    opacity: 1;
+    outline: none;
+    font-size: medium;
+    font-weight: bold;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  li .remove__button {
+    border-radius: 1rem;
+    border: 1px solid darkgrey;
+    padding: 0.4rem;
+    color: #e72929;
+    opacity: 0.8;
+    outline: none;
+    font-size: medium;
+    font-weight: bold;
+  }
+}
+
+li .remove__button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* the Checkout Summary Section */
+.checkout {
+  display: flex;
+  /* margin-right: 10px; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 0.8 3;
+  height: 12rem;
+  margin-left: 5px;
+  border: 1px solid #ffbbbb;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+/* the Div inside the Checkout */
+.checkout > div {
+  font-size: 1.4rem;
+  /* margin: 1rem; */
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+/* The Summary Section */
+.checkout__summary {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+/* The Delivery Charges */
+.food__delivery {
+  font-size: large;
+}
+
+/* The Delivery Charges */
+.food__delivery::before {
+  content: "Delivery Charge: ";
+}
+
+/* the Total Amount of Cart */
+.total__price {
+  font-size: large;
+}
+
+/* the Checkout Button */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .checkout a {
+    padding: 0.5rem;
+    color: white;
+    background: #e72929;
+    display: block;
+    width: 99%;
+    border-radius: 1rem;
+    text-align: center;
+    opacity: 1;
+    justify-self: center;
+    font-family: "Quicksand", "sans-serif";
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .checkout a {
+    padding: 0.5rem;
+    color: white;
+    background: #e72929;
+    display: block;
+    width: 99%;
+    border-radius: 1rem;
+    text-align: center;
+    opacity: 0.7;
+    justify-self: center;
+    font-family: "Quicksand", "sans-serif";
+  }
+}
+
+.checkout a:hover {
+  opacity: 1;
+  cursor: pointer;
+}

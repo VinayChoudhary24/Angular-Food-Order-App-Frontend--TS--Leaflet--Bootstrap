@@ -1,0 +1,33 @@
+/* The Main Container */
+.container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* This Contains the order Details and Order Items Details */
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 35rem;
+  margin-right: 1rem;
+}
+
+/* This Contains Just the Order Details */
+.details {
+  margin-bottom: 1rem;
+}
+
+/* The Childrens of Details */
+.details > div {
+  margin: 1rem;
+  font-size: 1.1rem;
+}
+
+/* The Strong Tag inside the Details */
+.details strong {
+  display: inline-block;
+  width: 20%;
+}

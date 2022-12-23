@@ -1,0 +1,14 @@
+<!-- the Input Container i.e email and Password-->
+<input-container [label]="label">
+<input
+[type]="type"
+[placeholder]="label"
+[formControl]="formControl" />
+
+<!-- To Show the Error Messages i.e Input-validation Components -->
+<input-validation
+[control]="control"
+[showErrorsWhen]="showErrorsWhen">
+</input-validation>
+
+</input-container>

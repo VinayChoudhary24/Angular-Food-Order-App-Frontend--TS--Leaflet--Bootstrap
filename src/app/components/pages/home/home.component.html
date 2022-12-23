@@ -1,0 +1,125 @@
+<!-- This will Show the Carousal in the Home Component -->
+<div class="carousel__container">
+  <ngb-carousel *ngIf="carouselImages">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img
+        class="carousel__images"
+        [src]="carouselImages[8].imageUrl"
+        alt="first slide" />
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img class="carousel__images"
+        [src]="carouselImages[13].imageUrl"
+        alt="second slide" />
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img
+        class="carousel__images"
+        [src]="carouselImages[14].imageUrl"
+        alt="third slide" />
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img
+        class="carousel__images"
+        [src]="carouselImages[15].imageUrl"
+        alt="fourth slide" />
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img
+        class="carousel__images"
+        [src]="carouselImages[16].imageUrl"
+        alt="fifth slide" />
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img
+        class="carousel__images"
+        [src]="carouselImages[17].imageUrl"
+        alt="sixth slide" />
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+
+<!-- This will show the Food Tags -->
+<!-- ({{ tag.count }}) To Show the Count -->
+<div class="tags">
+  <a *ngFor="let tag of tags" routerLink="/tag/{{tag.name}}">
+    {{ tag.name }}
+  </a>
+</div>
+
+<!-- This Will Show the Not Found Component i.e when Searched Something that is not Present in the App -->
+<app-not-found
+[visible]="!foods"
+notFoundMessage="Item Not Found..."
+resetLinkText="Reset Search"
+></app-not-found>
+
+<!-- This Contains the List of Foods -->
+<ul>
+  <li *ngFor="let food of foods" >
+    <!-- This will Re-direct the User to the Specific food when Clicked -->
+    <a routerLink="/food/{{food.id}}">
+      <!-- Show the Image -->
+      <img
+      class="food__image"
+      [src]="food.imageUrl"
+      [alt]="food.name" />
+
+      <!-- Details of the Food -->
+      <div class="contents">
+        <div class="name">
+          {{ food.name | titlecase }}<span class="favorite {{ food.favorite? '' : 'not' }}">
+            <fa-icon class="favorite__icon" [icon]="favoriteIcon"></fa-icon></span>
+        </div>
+
+        <!-- For Favorite -->
+
+      <div class="rating__cookTime">
+        <!-- Show the Stars *ng-starrating -->
+        <div class="rating">
+          <star-rating
+          [value]="food.stars"
+          [totalstars]="5"
+          checkedcolor="gold"
+          uncheckedcolor="black"
+          size="21px"
+          [readonly]="true" ></star-rating>
+        </div>
+
+        <!-- Time to Cook -->
+        <div class="cookTime">
+          <span><fa-icon [icon]="cookTimeIcon"></fa-icon></span>
+          {{ food.cookTime }}
+        </div>
+      </div>
+
+        <!-- Origins Details -->
+        <div class="product-item-footer">
+          <div class="origins">
+            <span *ngFor="let origin of food.origins">{{ origin | titlecase }}</span>
+          </div>
+
+        <!-- Price Details -->
+        <div class="price">
+          <span><fa-icon [icon]="rupeeIcon"></fa-icon></span>
+          {{ food.price }}
+        </div>
+
+        </div>
+      </div>
+    </a>
+
+  </li>
+</ul>

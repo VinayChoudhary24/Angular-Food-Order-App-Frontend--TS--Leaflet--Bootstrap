@@ -1,0 +1,50 @@
+<!-- the Order Items List Table -->
+<table>
+    <!-- The header -->
+    <tr>
+        <td colspan="5">
+            <h3>Ordered Items: </h3>
+            <hr>
+        </td>
+    </tr>
+    <!-- The Order Items Loop -->
+    <tr *ngFor="let item of order.items">
+        <!-- Image of Item -->
+        <td>
+            <a routerLink="/food/{{item.food.id}}">
+                <img
+                [src]="item.food.imageUrl" alt="" />
+            </a>
+        </td>
+        <!-- Name og Item -->
+        <td>
+            {{item.food.name}}
+        </td>
+        <!-- Price of Item -->
+        <td>
+            {{item.food.price}}
+        </td>
+        <!-- item Quantity -->
+        <td>
+            {{item.quantity}}
+        </td>
+        <!-- total price -->
+        <td>
+            {{item.price}}
+        </td>
+    </tr>
+    <!-- Total price of the order -->
+    <tr>
+        <td colspan="3"></td>
+        <td>
+            <strong>
+                Total:
+            </strong>
+        </td>
+        <td>
+            <strong>
+                {{order.totalPrice + 100}}
+            </strong>
+        </td>
+    </tr>
+</table>

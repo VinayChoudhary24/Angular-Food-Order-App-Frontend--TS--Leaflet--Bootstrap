@@ -1,0 +1,74 @@
+<!-- The Cart Page Title Component i.e Your Cart-->
+<app-cart-page-title title="Your Cart" margin="1.5rem 0 0 2.5rem"></app-cart-page-title>
+
+<!-- The Not-Found Component i.e When the Cart is Empty -->
+<app-not-found
+[visible]="!cart || !cart.items.length"
+notFoundMessage="Cart Page Is Empty..."
+resetLinkText="Go To Home Page"></app-not-found>
+<hr>
+
+<div class="row cart">
+  <div *ngIf="cart && cart.items.length" class="col-xs-12 container">
+    <!-- This Contains the Added Cart Items -->
+    <ul class="list-group">
+      <li
+      *ngFor="let cartItem of cart.items"
+      class="list-group-item">
+      <!-- The Details of the items Added -->
+      <div>
+      <!-- The Image of the item -->
+        <img
+        [src]="cartItem.food.imageUrl"
+        alt="{{ cartItem.food.name }}" />
+      </div>
+
+          <!-- The Name With Router to take Back to Single Food-Page -->
+          <div class="item__name">
+            <a routerLink="/food/{{ cartItem.food.id }}">{{ cartItem.food.name }}</a>
+          </div>
+
+          <!-- To Change the Quantity of the Item -->
+          <div class="item__quantity">
+            <select
+            #quantitySelect
+            [value]="cartItem.quantity"
+            (change)="onChangeQuantity(cartItem, quantitySelect.value)">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <!-- The Price of the Item -->
+          <div class="item__price"><span><fa-icon [icon]="rupeeIcon"></fa-icon></span>
+            {{ cartItem.price }}
+          </div>
+
+          <!-- To Remove the item From Cart -->
+          <div>
+            <button
+            (click)="onRemoveFromCart(cartItem) "
+            class="remove__button">Remove</button>
+          </div>
+      </li>
+    </ul>
+
+    <!-- The CheckOut Page Summary Section -->
+    <div class="checkout">
+      <div>
+        <!-- <div class="foods__count"></div> -->
+        <div class="checkout__summary">Summary</div>
+        <div class="food__delivery"><span style="font-weight: 600;">100</span></div>
+        <!-- <div>Tax: {{ cart.totalTax }}</div> -->
+        <div class="total__price"><span>Total Amount({{ cart.totalCount }} items): </span>
+                                  <span style="font-weight: 600;">Rs.{{ cart.totalPrice + 100 }}</span></div>
+      </div>
+
+    <!-- Re-direct to Checkout -->
+    <a routerLink="/checkout">Proceed to Checkout</a>
+    </div>
+  </div>
+</div>

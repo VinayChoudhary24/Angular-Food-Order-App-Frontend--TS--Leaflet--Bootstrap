@@ -1,0 +1,159 @@
+/* The Heading of the Page */
+.heading {
+  margin: 5px;
+  padding: 5px;
+}
+
+/* The Main Container */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+  /* border: 1px solid; */
+  margin: 0;
+  padding: 10px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    /* border: 1px solid; */
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
+
+/* This Conains the User Details */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .details {
+    /* border: 1px solid brown; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .details {
+    /* border: 1px solid brown; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+  }
+}
+
+.details span {
+  font-size: large;
+}
+
+/* The name of the USer */
+.name {
+  margin-bottom: 7px;
+  border: 2px solid whitesmoke;
+  box-shadow: 0px 1px 5px 1px #880D1E;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* The email of the USer */
+.email {
+  margin-bottom: 7px;
+  border: 2px solid whitesmoke;
+  box-shadow: 0px 1px 5px 1px #880D1E;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* The address of the USer */
+.address {
+  margin-bottom: 7px;
+  border: 2px solid whitesmoke;
+  box-shadow: 0px 1px 5px 1px #880D1E;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+
+/* the Main Sections Container i.e Footer */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .sections__container {
+    display: grid;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .sections__container {
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    /* padding-bottom: 200px; */
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    /* margin-bottom: 10px; */
+  }
+}
+
+/* Section i.e Image And Text Lines */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    color: #fff;
+    text-align: center;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .section {
+    margin-bottom: 5px;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+/* Section Image */
+.section__image {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.image {
+  /* margin-bottom: 42px; */
+  border-style: none;
+}
+
+/* The First Text Written */
+.textOne {
+  color: #880D1E;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+/* the Second Text Written */
+.textTwo {
+  font-size: 15px;
+  font-style: oblique;
+  width: 260px;
+  /* margin-top: 10px; */
+  color:  brown;
+  /* line-height: 1.3 */
+}
