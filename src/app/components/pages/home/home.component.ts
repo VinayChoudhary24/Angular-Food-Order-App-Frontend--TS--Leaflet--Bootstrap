@@ -4,6 +4,7 @@ import { Food } from 'src/app/shared/models/Food';
 import { faHeart, faClock, faRupeeSign } from '@fortawesome/free-solid-svg-icons';
 import { ActivatedRoute } from '@angular/router';
 import { Tag } from 'src/app/shared/models/Tag';
+import { StarRatingComponent } from 'ng-starrating';
 
 @Component({
   selector: 'app-home',

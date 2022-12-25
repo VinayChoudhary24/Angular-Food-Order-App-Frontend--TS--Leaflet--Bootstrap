@@ -75,8 +75,7 @@ import { ShortenPipe } from './components/partials/pipe/shorten.pipe';
     //   newestOnTop: false,
     // }),
   ],
-  providers: [
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
