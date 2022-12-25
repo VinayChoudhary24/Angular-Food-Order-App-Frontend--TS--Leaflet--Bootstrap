@@ -12,6 +12,7 @@ div {
 /* the Home PAge Text/Link */
 a {
     font-size: 1.1rem;
+    text-decoration: none;
     background-color: #e72929;
     color: white;
     border-radius: 10rem;
