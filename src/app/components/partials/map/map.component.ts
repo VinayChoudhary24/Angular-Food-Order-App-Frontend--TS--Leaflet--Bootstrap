@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnChanges, OnInit, ViewChild } from '@angular/core';
 import { icon, LatLng, latLng, LatLngExpression, LatLngTuple, LeafletMouseEvent, map, Map, marker, Marker, tileLayer } from 'leaflet';
 import { LocationService } from 'src/app/services/location.service';
 import { Order } from 'src/app/shared/models/Order';
@@ -8,7 +8,7 @@ import { Order } from 'src/app/shared/models/Order';
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
-export class MapComponent implements OnChanges {
+export class MapComponent implements OnInit {
 
   // Set the User Address According to the LatLng i.e CurrentLocation
   @Input() order!: Order;
@@ -43,7 +43,7 @@ export class MapComponent implements OnChanges {
   // Inject LocationService to use the Method getCurrentLocation
   constructor( private locationService: LocationService ) { }
 
-  ngOnChanges(): void {
+  ngOnInit(): void {
     if(!this.order) return;
     // Call the InitializeMap Method
     this.initializeMap();

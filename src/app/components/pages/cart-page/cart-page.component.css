@@ -118,7 +118,7 @@ ul li:last-child {
   .item__name a {
     position: absolute;
     top: 5%;
-    left: 31%;
+    left: 35%;
     display: flex;
     justify-content: center;
     color: brown;
