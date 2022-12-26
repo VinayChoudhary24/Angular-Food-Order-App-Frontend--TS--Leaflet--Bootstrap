@@ -44,9 +44,23 @@ export class MapComponent implements OnInit {
   constructor( private locationService: LocationService ) { }
 
   ngOnInit(): void {
-    if(!this.order) return;
-    // Call the InitializeMap Method
-    this.initializeMap();
+    // if(!this.order) return;
+    // // Call the InitializeMap Method
+    // this.initializeMap();
+    // When it is not Initialized YEt
+  //   // Here map is a Leaflet Function different From Map Above
+  //   // map() function will Create the Map
+    this.map = map(this.mapRef.nativeElement, {
+      attributionControl: false
+      // setView is Use to Set the view of the Map, 1 is the Zoom Level
+    }).setView(this.DEFAULT_LATLNG, 1)
+    // Show the Default View of Map
+    tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(this.map);
+
+    // Moving the Map MARKER_ICON when Clicked on map
+    this.map.on('click', (e:LeafletMouseEvent) => {
+      this.setMarker(e.latlng);
+    })
 
     // Showing Map in ReadOnly Mode
     if(this.readonly && this.addressLatLng) {
@@ -72,25 +86,25 @@ export class MapComponent implements OnInit {
   }
 
   // This Will Initialize the Map
-  initializeMap() {
-    // When map is Already Initialized
-    if(this.map) return;
+  // initializeMap() {
+  //   // When map is Already Initialized
+  //   if(this.map) return;
 
-    // When it is not Initialized YEt
-    // Here map is a Leaflet Function different From Map Above
-    // map() function will Create the Map
-    this.map = map(this.mapRef.nativeElement, {
-      attributionControl: false
-      // setView is Use to Set the view of the Map, 1 is the Zoom Level
-    }).setView(this.DEFAULT_LATLNG, 1)
-    // Show the Default View of Map
-    tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(this.map);
+  //   // When it is not Initialized YEt
+  //   // Here map is a Leaflet Function different From Map Above
+  //   // map() function will Create the Map
+  //   this.map = map(this.mapRef.nativeElement, {
+  //     attributionControl: false
+  //     // setView is Use to Set the view of the Map, 1 is the Zoom Level
+  //   }).setView(this.DEFAULT_LATLNG, 1)
+  //   // Show the Default View of Map
+  //   tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(this.map);
 
-    // Moving the Map MARKER_ICON when Clicked on map
-    this.map.on('click', (e:LeafletMouseEvent) => {
-      this.setMarker(e.latlng);
-    })
-  }
+  //   // Moving the Map MARKER_ICON when Clicked on map
+  //   this.map.on('click', (e:LeafletMouseEvent) => {
+  //     this.setMarker(e.latlng);
+  //   })
+  // }
 
   // This will get the Current Location of the User
   findMyLocation() {

@@ -261,6 +261,7 @@ li .remove__button:hover {
   display: flex;
   /* margin-right: 10px; */
   flex-direction: column;
+  font-family: "Quiksand";
   justify-content: center;
   align-items: flex-start;
   flex: 0.8 3;
