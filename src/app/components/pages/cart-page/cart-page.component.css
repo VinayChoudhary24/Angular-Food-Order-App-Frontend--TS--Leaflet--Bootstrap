@@ -311,6 +311,7 @@ li .remove__button:hover {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .checkout a {
+    font-family: Arial, Helvetica, sans-serif;
     padding: 0.5rem;
     color: white;
     background: #e72929;
@@ -320,12 +321,12 @@ li .remove__button:hover {
     text-align: center;
     opacity: 1;
     justify-self: center;
-    font-family: "Quicksand", "sans-serif";
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .checkout a {
+    font-family: Arial, Helvetica, sans-serif;
     padding: 0.5rem;
     color: white;
     background: #e72929;
@@ -335,7 +336,6 @@ li .remove__button:hover {
     text-align: center;
     opacity: 0.7;
     justify-self: center;
-    font-family: "Quicksand", "sans-serif";
   }
 }
 

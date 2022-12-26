@@ -155,12 +155,13 @@ a {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   li a {
-    height: 180px;
-    width: 150px;
+    height: 210px;
+    width: 180px;
     border: 1px solid lightgray;
     box-shadow: 1px 2px 4px -1px rgba(0, 0, 0, 0.75);
     border-radius: 10px;
-    margin: 5px;
+    margin: 3px;
+    /* padding: 10px; */
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -195,7 +196,7 @@ li a:hover {
 @media only screen and (max-width: 600px) {
   .food__image {
     width: 100%;
-    height: 80px;
+    height: 100px;
     object-fit: cover;
   }
 }
@@ -212,6 +213,9 @@ li a:hover {
 /* The Details of the Food i.e Name, fav., ratings, cookTime, Origins, Price */
 .contents {
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   /* background-color: whitesmoke; */
 }
 
@@ -221,7 +225,7 @@ li a:hover {
   .name {
     border: 1px solid whitesmoke;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 14px;
     background: whitesmoke;
     display: flex;
     justify-content: space-between;
@@ -252,7 +256,7 @@ li a:hover {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .rating__cookTime {
-    margin: -3px auto;;
+    /* margin: -3px auto;; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -273,7 +277,7 @@ li a:hover {
 @media only screen and (max-width: 600px) {
   .rating {
     /* margin-bottom: 3px; */
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
@@ -303,7 +307,7 @@ li a:hover {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .product-item-footer {
-    margin: -5px auto;
+    /* margin: -5px auto; */
   padding: 5px;
   display: flex;
   flex-direction: column;

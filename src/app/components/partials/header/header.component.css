@@ -69,9 +69,9 @@ header a:hover {
   .name {
     /* font-family: "Quicksand", "sans-serif"; */
     font-size: medium;
-    /* font-weight: bold; */
-    margin-right: 1px;
-    /* padding: 10px; */
+    font-weight: 500;
+    margin-right: 3px;
+    padding: 3px;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
@@ -137,7 +137,7 @@ header a:hover {
     cursor: pointer;
     color: rgb(186, 44, 44);
     position: absolute;
-    left: 56%;
+    left: 48%;
     bottom:10px;
     font-size: 14px;
   }
@@ -210,7 +210,7 @@ header a:hover {
     justify-content: space-evenly;
     /* align-items: center; */
     list-style-type: none;
-    margin: 0px 0px 0px -35px;
+    margin: 0px 0px 0px 0px;
   }
 }
 

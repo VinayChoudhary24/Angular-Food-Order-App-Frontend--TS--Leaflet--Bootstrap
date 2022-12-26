@@ -51,10 +51,10 @@ export class CheckoutPageComponent implements OnInit {
       }
       // Validating the User Address before Connecting to the oder.service
       // the User has NOT Selected the Address
-      if(!this.order.addressLatLng) {
-        alert("Please, Select Your Location on the map");
-        return;
-      }
+      // if(!this.order.addressLatLng) {
+      //   alert("Please, Select Your Location on the map");
+      //   return;
+      // }
     //  Checkout Form is Valid
     // the User has Selected Address
     // set the Value To Send to Server
