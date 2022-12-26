@@ -1,5 +1,5 @@
 <!-- This will Show the Carousal in the Home Component -->
-<div class="carousel__container">
+<!-- <div class="carousel__container">
   <ngb-carousel *ngIf="carouselImages">
     <ng-template ngbSlide>
       <div class="picsum-img-wrapper">
@@ -49,7 +49,46 @@
       </div>
     </ng-template>
   </ngb-carousel>
+</div> -->
+<!-- ------------------------------------------------------------------------------------ -->
+
+<div class="carousel__container">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" *ngIf="carouselImages">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img [src]="carouselImages[8].imageUrl" class="carousel__images" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img [src]="carouselImages[9].imageUrl" class="carousel__images" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img [src]="carouselImages[14].imageUrl" class="carousel__images" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img [src]="carouselImages[15].imageUrl" class="carousel__images" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img [src]="carouselImages[16].imageUrl" class="carousel__images" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img [src]="carouselImages[13].imageUrl" class="carousel__images" alt="...">
+      </div>
+    </div>
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button> -->
+  </div>
 </div>
+
+
+
+
+
 
 <!-- This will show the Food Tags -->
 <!-- ({{ tag.count }}) To Show the Count -->

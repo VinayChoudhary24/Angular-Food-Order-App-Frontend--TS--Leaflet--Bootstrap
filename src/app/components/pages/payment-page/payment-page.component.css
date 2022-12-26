@@ -68,6 +68,16 @@
   flex-basis: 5rem;
 }
 
+/* the MAP Container */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .right__section {
+    /* border: 1px solid red; */
+    max-width: 340px;
+    height: 535px;
+  }
+}
+
 /*the Main buttons Container --the Go To Payment  */
 .buttons__container {
   /* border: 1px solid; */

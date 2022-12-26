@@ -4,7 +4,6 @@ import { Food } from 'src/app/shared/models/Food';
 import { faHeart, faClock, faRupeeSign } from '@fortawesome/free-solid-svg-icons';
 import { ActivatedRoute } from '@angular/router';
 import { Tag } from 'src/app/shared/models/Tag';
-import { StarRatingComponent } from 'ng-starrating';
 
 @Component({
   selector: 'app-home',
@@ -34,7 +33,8 @@ export class HomeComponent implements OnInit {
   // Inject the food.service to get the food data i.e getFoodData
   constructor( private foodService: FoodService,
     // Inject Router to Naviagte to the Searched Item
-    private activatedRoute: ActivatedRoute ) {}
+    private activatedRoute: ActivatedRoute ) {
+    }
 
   ngOnInit()  {
           // To Get the Images from Food[]
