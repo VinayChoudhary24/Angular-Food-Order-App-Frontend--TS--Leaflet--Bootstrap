@@ -6,12 +6,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     height: 40px;
     width: 100%;
     background-color: white;
-    padding: 0;
-    margin: 0px 0px;
+    /* padding: 0; */
+    /* margin: 0px 0px; */
     border-bottom: 1px solid #F0F600;
   }
 }
@@ -86,8 +85,9 @@ header a:hover {
 
 /* The search field and Icon */
 .search {
+  /* border: 1px solid red; */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -95,9 +95,9 @@ header a:hover {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .search__input {
-    margin-left: 5px;
+    margin-left: 10px;
+    margin-right: 5px;
     text-align: start;
-    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
     border-radius: 5px;
@@ -115,12 +115,12 @@ header a:hover {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .search__input {
-    position: relative;
+    margin-right: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     border-radius: 15px;
     height:35px;
-    width: 265px;
+    width: 250px;
     padding: 7px;
     outline: none;
     border: 1px solid #B57BA6;
@@ -136,10 +136,7 @@ header a:hover {
   .search__icon {
     cursor: pointer;
     color: rgb(186, 44, 44);
-    position: absolute;
-    left: 48%;
-    bottom:10px;
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
@@ -147,10 +144,7 @@ header a:hover {
   .search__icon {
     cursor: pointer;
     color: brown;
-    position: absolute;
-    left: 34.5%;
-    bottom: 13px;
-    font-size: 17px;
+    font-size: 20px;
   }
 }
 
@@ -160,9 +154,6 @@ header a:hover {
 @media only screen and (max-width: 600px) {
   .services__logo {
   display: none;
-  flex: 0.5;
-  justify-content: space-between;
-  align-items: center;
   }
 }
 
@@ -183,7 +174,6 @@ header a:hover {
   .user__details {
     font-size: medium;
     /* font-family: Arial, Helvetica, sans-serif; */
-    position: relative;
     display: flex;
     align-items: center;
   }
@@ -194,7 +184,6 @@ header a:hover {
   .user__details {
     font-size: larger;
     /* font-family: Arial, Helvetica, sans-serif; */
-    position: relative;
     display: flex;
     align-items: center;
   }
@@ -204,7 +193,7 @@ header a:hover {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .user__details ul {
-    width: 150px;
+    /* width: 150px; */
     /* border: 1px solid green; */
     display: flex;
     justify-content: space-evenly;
@@ -227,8 +216,9 @@ header a:hover {
 }
 
 .user__details ul a {
-  display: inline-block;
+  /* display: inline-block; */
   padding: 3px;
+  margin-right: 5px;
 }
 
 /* The Cart COUNT */
