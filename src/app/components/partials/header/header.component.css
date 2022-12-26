@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
+    height: 45px;
     width: 100%;
     background-color: white;
     /* padding: 0; */
@@ -67,7 +67,7 @@ header a:hover {
 @media only screen and (max-width: 600px) {
   .name {
     /* font-family: "Quicksand", "sans-serif"; */
-    font-size: medium;
+    font-size: large;
     font-weight: 500;
     margin-right: 3px;
     padding: 3px;
@@ -100,7 +100,7 @@ header a:hover {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
     border-radius: 5px;
-    height: 23px;
+    height: 27px;
     width: 130px;
     /* padding: 7px; */
     outline: none;
@@ -171,6 +171,7 @@ header a:hover {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .user__details {
+    /* border: 1px solid red; */
     font-size: medium;
     /* font-family: Arial, Helvetica, sans-serif; */
     display: flex;
