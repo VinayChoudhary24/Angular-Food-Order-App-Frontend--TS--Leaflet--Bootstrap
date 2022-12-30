@@ -261,22 +261,24 @@ export const sampleTags: Tag[] = [
 // Users Array
 // sample Users to test the Api
 export const sampleUsers: User[] = [
-  {
-    name: 'Vinay',
-    email: 'test@gmail.com',
-    password: '123456',
-    address: 'L.A',
-    isAdmin: true,
-    id: "",
-    token: "",
-  },
-  {
-    name: 'VinayC',
-    email: 'test2@gmail.com',
-    password: '123456',
-    address: 'NYC',
-    isAdmin: false,
-    id: "",
-    token: "",
-  },
+  // {
+  //   name: 'Vinay',
+  //   email: 'test@gmail.com',
+  //   password: '123456',
+  //   address: 'L.A',
+  //   isAdmin: true,
+  //   id: "",
+  //   token: "",
+  //   _tokenExpirationDate: Date,
+  //   _token: string
+  // },
+  // {
+  //   name: 'VinayC',
+  //   email: 'test2@gmail.com',
+  //   password: '123456',
+  //   address: 'NYC',
+  //   isAdmin: false,
+  //   id: "",
+  //   token: "",
+  // },
 ];

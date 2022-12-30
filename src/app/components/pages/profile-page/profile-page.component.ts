@@ -10,16 +10,20 @@ import { User } from 'src/app/shared/models/User';
 export class ProfilePageComponent implements OnInit {
 
   // Store the User Details
-  user!: User;
+  userName: string = '';
+  userEmail: string = '';
+  userAddress: string = '';
 
   // Inject UserService To get the User Details
   constructor( private userService: UserService ) { }
 
   ngOnInit(): void {
-    // Get and Store the Details
-    this.userService.userObservable.subscribe( (newUser) => {
-      this.user = newUser;
-    })
+    if(localStorage.getItem('User')) {
+      let userData = localStorage.getItem('User');
+      let userStoredData = userData && JSON.parse(userData);
+      this.userName = userStoredData.name;
+      this.userEmail = userStoredData.email;
+      this.userAddress = userStoredData.address;
+    }
   }
-
 }

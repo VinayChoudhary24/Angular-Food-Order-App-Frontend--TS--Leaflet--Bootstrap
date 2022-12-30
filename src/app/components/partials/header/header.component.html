@@ -54,16 +54,16 @@
       <div class="user__details">
         <ul>
           <!-- This *ngIf will Hide if the  User is Already logged in -->
-          <li *ngIf="!isAuth">
+          <li *ngIf="switchMode != 'user'">
             <a
             routerLink="/login"
             class="user__login">Login</a>
           </li>
-          <li *ngIf="isAuth" class="user__menu">
+          <li class="user__menu" *ngIf="switchMode == 'user'">
             <div class="dropdown">
               <!-- Get the Name of user from userName Property -->
               <!-- Use the Pipe to Only Show First 8 Characters of Name -->
-              <a routerLink="/dashboard">{{user.name | shortenPipe}}</a>
+              <a routerLink="/dashboard">{{userName | shortenPipe}}</a>
 
             <!-- The Othe Features -->
             <div class="dropdown__menu">

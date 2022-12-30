@@ -1,5 +1,7 @@
 <div class="container">
+
     <div class="details">
+
         <!-- The Title of the Page -->
         <app-cart-page-title title="Create Your Account"></app-cart-page-title>
         <hr>
@@ -40,6 +42,11 @@
         [control]="fc.address"
         [showErrorsWhen]="isSubmitted"
         label="Enter Delivery Address"></text-input>
+
+        <!-- Showing the Error with Bootstrap Class -->
+        <div class="alert alert-danger" *ngIf="userRegisterError">
+          <p>{{ userRegisterError}}</p>
+        </div>
 
         <!-- add default-button Component --for Register Button -->
         <default-button text="Register"></default-button>

@@ -4,4 +4,5 @@ export interface UserRegister {
     password: string;
     confirmPassword: string;
     address: string;
+    returnSecureToken: boolean;
 }

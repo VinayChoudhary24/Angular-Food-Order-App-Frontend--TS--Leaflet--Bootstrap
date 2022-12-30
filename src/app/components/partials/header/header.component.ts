@@ -4,6 +4,7 @@ import { faSearch, faShoppingBasket, faCaretDown } from '@fortawesome/free-solid
 import { CartService } from 'src/app/services/cart.service';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/shared/models/User';
+import { RegisterPageComponent } from '../../pages/register-page/register-page.component';
 
 @Component({
   selector: 'app-header',
@@ -13,8 +14,13 @@ import { User } from 'src/app/shared/models/User';
 
 export class HeaderComponent implements OnInit {
 
+  // To Check the Type i.e seller and User
+  switchMode: string = '';
+
+  user!: User;
+
    // To Store the Name of the User
-   user!: User;
+   userName: string = '';
 
   // To Store the Change in the Cart Section
   cartQuantity = 0;
@@ -37,7 +43,7 @@ export class HeaderComponent implements OnInit {
     // Inject CartService to Change the header Cart Quantity
     private cartService: CartService,
     // Inject UserService to Get the Name of the User in the Header
-    private userService: UserService,
+    private userService: UserService
     ) {
       this.activatedRoute.params.subscribe( (params) => {
         if(params.searchTerm) {
@@ -51,17 +57,22 @@ export class HeaderComponent implements OnInit {
     this.cartService.getCartObservable().subscribe( (newCart) => {
       this.cartQuantity = newCart.totalCount;
     })
-
-    // Get the Name of the User in Header Section
-    this.userService.userObservable.subscribe( (newUser) => {
-      this.user = newUser;
-    })
+    if(localStorage.getItem('User')) {
+      let userData = localStorage.getItem('User');
+      let userStoredData = userData && JSON.parse(userData);
+      this.userName = userStoredData.name;
+      this.switchMode = 'user';
+    }
+    // // Get the Name of the User in Header Section
+    // this.userService.userObservable.subscribe( newUser => {
+    //   this.user = newUser;
+    // })
   }
 
   // Condition to Check if the User is Valid to Show and Hide Different Options i.e Login, Logout, details...
-  get isAuth() {
-    return this.user.token;
-  }
+  // get isAuth() {
+  //   return this.user.email;
+  // }
 
    // To show the Searched Results
   search(term: string) {

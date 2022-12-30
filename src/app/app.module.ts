@@ -30,6 +30,9 @@ import { RazorpayButtonComponent } from './components/partials/razorpay-button/r
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 import { ShortenPipe } from './components/partials/pipe/shorten.pipe';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 // import { ToastrModule } from 'ngx-toastr';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -69,6 +72,8 @@ import { ShortenPipe } from './components/partials/pipe/shorten.pipe';
     NgbModule,
     HttpClientModule,
     ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
     // ToastrModule.forRoot({
     //   timeOut: 3000,
     //   positionClass: 'toast-bottom-right',
